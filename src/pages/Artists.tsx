@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Play, ChevronLeft, ChevronRight } from "lucide-react";
 import { artists, type Artist } from "../lib/artists";
-import { releases, type Release } from "../lib/releases";
+import { releases } from "../lib/releases";
 import { updatePageMetadata } from "../lib/metadata";
 
 function Artists() {
@@ -151,7 +151,7 @@ function Artists() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {releases.map((release, index) => (
+            {releases.map((release) => (
               <div
                 key={release.id}
                 onClick={() => console.log(`Playing ${release.title}`)}
