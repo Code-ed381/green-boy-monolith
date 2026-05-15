@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+  }
+
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .pill-button {
+    @apply inline-flex items-center px-6 py-3 rounded-full text-sm font-medium transition-all duration-200;
+  }
+
+  .pill-button-primary {
+    @apply bg-green-primary text-white hover:bg-green-800 hover:scale-105 hover:shadow-lg;
+  }
+
+  .pill-button-secondary {
+    @apply bg-white border border-gray-divider text-gray-medium hover:bg-gray-bg hover:scale-105;
+  }
+
+  .pill-tag {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(135deg, #edf5e6 0%, #f5f0e8 50%, #e8eef5 100%);
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-xl;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #3d7a18 0%, #8b6914 50%, #1e3a8a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass-effect {
+    @apply bg-white/80 backdrop-blur-md border border-white/20;
+  }
+
+  .music-card {
+    @apply relative overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+  }
+
+  .video-thumbnail {
+    @apply relative rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+    aspect-ratio: 16 / 9;
+  }
+
+  .artist-card {
+    @apply relative overflow-hidden rounded-2xl transition-all duration-300 hover:scale-105;
+  }
+
+  .news-card {
+    @apply bg-white rounded-xl p-6 shadow-sm border border-gray-border hover:shadow-md transition-all duration-200;
+  }
+}
